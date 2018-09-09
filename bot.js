@@ -448,7 +448,7 @@ client.on('message', msg => {
     
   })
 
-lient.on('guildCreate', guild => {
+client.on('guildCreate', guild => {
   var embed = new Discord.RichEmbed()
   .setColor(0x5500ff)
   .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك**`)
