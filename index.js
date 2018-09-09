@@ -2291,12 +2291,3 @@ hours = 12;
   }
  
 });
-
-
-
-
-
-
-
-
-client.login("NDcwNDc1MTc0MjE5NzQzMjM0.DlND-Q.-Rd7auSHXbZo6cOSz_TxXovnifE");
