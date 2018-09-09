@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const prefix = '/'
 
 client.on('ready', () => {
+ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
   console.log(`Logged in as ${client.user.tag}!`);
   console.log('')
   console.log('')
