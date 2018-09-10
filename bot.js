@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
- client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
+client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
   console.log(`Logged in as ${client.user.tag}!`);
   console.log('')
   console.log('')
@@ -83,6 +83,7 @@ client.on('message', message => {
     }
 });
 
+
 client.on('message', message => {
      if (message.content === ".servers") {
      let embed = new Discord.RichEmbed()
@@ -127,6 +128,8 @@ if (message.content === '/help') {
   message.author.sendEmbed(embed);
     }
 });
+
+
 client.on('message', message => {
      if (message.content === ".servers") {
      let embed = new Discord.RichEmbed()
@@ -146,6 +149,8 @@ if (message.content === '/help') {
   message.author.sendEmbed(embed);
     }
 });
+
+
 client.on('message', message => {
      if (message.content === ".servers") {
      let embed = new Discord.RichEmbed()
@@ -161,6 +166,8 @@ if (message.content === '/help') {
   message.author.sendEmbed(embed);
     }
 });
+
+
 client.on('message', message => {
     if (message.content === '*roles') {
         var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
@@ -170,6 +177,7 @@ client.on('message', message => {
         message.channel.sendEmbed(embed);
     }
 });
+
 client.on('message', message => {
 if (message.content.startsWith('/ping')) {
            if(!message.channel.guild) return;
@@ -180,6 +188,7 @@ if (message.author.bot) return;
 
 });
 var prefix = "*";
+
 
 client.on('message', message => {
     if (message.author.bot) return;
@@ -207,6 +216,7 @@ client.on('message', message => {
 
 });
 var prefix = "/";
+
 client.on('message', message => {
     if(message.content == prefix + 'server') {
         var servername = message.guild.name
@@ -233,6 +243,7 @@ client.on('message', message => {
         message.channel.sendEmbed(server)
     }
 });
+
 client.on("message", message => {
     var prefix = "/";
  
@@ -283,6 +294,8 @@ client.on('message', message => {
     return message.reply(`** يمنع نشر الروابط ! **`)
     }
 });
+
+
 client.on('message', message => {
      if (message.content === "servers") {
      let embed = new Discord.RichEmbed()
@@ -291,6 +304,7 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 });
+
 client.on('message', message => {
 if (message.content === "/help") {
 message.reply("**Done | تــم**")
@@ -379,6 +393,7 @@ client.on('message',async message => {
   }
 });
 
+
 client.on('message', message => {
         var prefix = '*'; // هنا تقدر تغير البرفكس
 	var command = message.content.split(" ")[0];
@@ -424,6 +439,7 @@ client.on('message', message => {
 	}
 });
   
+
 client.on('message', msg => {
     if(msg.author.bot) return;
     
@@ -448,12 +464,14 @@ client.on('message', msg => {
     
   })
 
+
 client.on('guildCreate', guild => {
   var embed = new Discord.RichEmbed()
   .setColor(0x5500ff)
   .setDescription(`**شكراً لك لإضافه البوت الى سيرفرك**`)
       guild.owner.send(embed)
 });
+
 
 
 client.on('message', message => {
@@ -711,6 +729,7 @@ member.send( `${member} ! ` + "**" + message.guild.name + " : ** " + message.con
                                                             message.delete();
 });
 });
+
 Client.on("message", message => {
     var prefix = "/";
  
@@ -861,6 +880,7 @@ client.on("message", message => {
 });
 
 var prefix = "/";
+
 client.on('message', message => {
     if(message.content == prefix + 'server') {
         var servername = message.guild.name
@@ -1075,6 +1095,7 @@ client.on('message', message => {
   }
 });
 
+
 client.on('message', async message => {
             if(!message.channel.guild) return;
              if (message.content.startsWith("/sets")) {
@@ -1101,6 +1122,7 @@ let args = message.content.split(' ').slice(1).join(' ');
         
 }
 });
+
 
 client.on('message' , message => {
   var prefix = "/";
@@ -1141,12 +1163,7 @@ suggestchannel.send("@everyone  `||` @here ");
 
 
 
-client.on("ready", () => {
-let channel =     client.channels.get("471430457532350480")
-setInterval(function() {
-channel.send(`**لا تنسى التفاعل الى يتفاعل لية مفاجئة و لا تنسى تحط قبل اسمك DT عشان تكون من الكلان**`);
-}, 7200000)
-})
+
 
 client.on('message', message => {
     if (message.content.startsWith("/hacker")) {
