@@ -2299,4 +2299,4 @@ hours = 12;
 
 
 
-client.login("");
+client.login(process.env.BOT_TOKEN);
