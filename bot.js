@@ -2801,10 +2801,10 @@ client.on("message", message => {
 
 
 
-const Discord = require('discord.js')
+
 client.on('message', message => {
 
-if(message.content.startsWith('=voting')) {
+if(message.content.startsWith('/vote')) {
     let msg = await message.channel.send("Vote!");
   await msg.react("👍")
 
