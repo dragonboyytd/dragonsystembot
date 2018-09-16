@@ -2882,26 +2882,6 @@ client.on('warn', console.warn);
 
 client.on('error', console.error);
 
-client.on('ready', () => { 
-console.log(`
-------------------------------------------------------
-> Logging in...
-------------------------------------------------------
-Logged in as ${client.user.tag}
-Working on ${client.guilds.size} servers!
-${client.channels.size} channels and ${client.users.size} users cached!
-I am logged in and ready to roll!
-LET'S GO!
-------------------------------------------------------
--------------------------------------------------------
-------------------------------------------------------
-----------------------Bot's logs----------------------`);
-
-
-});
-
-
-
 client.on('disconnect', () => console.log('I just disconnected, making sure you know, I will reconnect now...'));
 
 client.on('reconnecting', () => console.log('I am reconnecting now!'));
