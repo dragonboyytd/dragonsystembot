@@ -2789,27 +2789,33 @@ var botid = ["470475174219743234"];
 
 
 
-const YTDL = require('ytdl-core');
-const nodeopus = require('node-opus');
-const ffmpeg = require('ffmpeg');
-var servers = {};
-function play(connection, message, args) {
-  var server = servers[message.guild.id];
-  server.dispatcher = connection.playStream(YTDL(args[0]), {filter: "audioonly"});
-  server.queue.shift();
-  server.dispatcher.on("end", function() {
-    if (server.queue[0]) play(connection, message);
-    else connection.disconnect();
-  });
-}
 
 
-client.on('message', message =>{
-  if(message.content.startsWith('join')){
-    const voiceChannel = message.member.voiceChannel
-    voiceChannel.join();
-    message.channel.send("تم الأتصال بالروم الصوتي")
+client.on("message", message => {
+  if(message.content.startsWith("/kill")) {
+  if(message.author.id === "52352352352352") { //اي ديك
+    message.channel.send('سيتم اطفاء البوت')
+    process.kill(process.pid)
+  } else return;
 }})
+
+
+
+const Discord = require('discord.js')
+client.on('message', message => {
+
+if(message.content.startsWith('=voting')) {
+    let msg = await message.channel.send("Vote!");
+  await msg.react("👍")
+
+  const reactions = await message.awaitReactions(reaction => {
+    return reaction.emoji.name === "👍", {time: 30000}
+}
+}})
+
+
+
+
 
 
 
