@@ -2951,6 +2951,8 @@ client.on("message", message => {
 
 
 
+const moment = require('moment');
+const games = JSON.parse(fs.readFileSync("./games.json", "utf8"));
 
 client.on("message", (message) => {
   var sender = message.author
