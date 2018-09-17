@@ -2902,6 +2902,80 @@ voiceChannel.leave();
 
 
 
+const prefix = "/"
+client.on("message", message => {
+    if (!message.content.startsWith(prefix)) return;
+      let command = message.content.split(" ")[0];
+      command = command.slice(prefix.length);
+        if(command === "face") {
+                const args = message.content.split(" ").slice(1).join(" ")
+        if (!args) return message.channel.send("** Type your skin name **");
+        const image = new Discord.Attachment(`https://minecraft-skin-viewer.com/face.php?u=${args}`, "face.png");
+    message.channel.send(image)
+        }
+    });
+client.on("message", message => {
+    if (!message.content.startsWith(prefix)) return;
+      let command = message.content.split(" ")[0];
+      command = command.slice(prefix.length);
+        if(command === "abody") {
+                const args = message.content.split(" ").slice(1).join(" ")
+        if (!args) return message.channel.send("** Type your skin name **");
+        const image = new Discord.Attachment(`https://minecraft-skin-viewer.com/body-all.php?u=${args}`, "abody.png");
+    message.channel.send(image)
+        }
+    });
+client.on("message", message => {
+    if (!message.content.startsWith(prefix)) return;
+      let command = message.content.split(" ")[0];
+      command = command.slice(prefix.length);
+        if(command === "body") {
+                const args = message.content.split(" ").slice(1).join(" ")
+        if (!args) return message.channel.send("** Type your skin name **");
+        const image = new Discord.Attachment(`https://minecraft-skin-viewer.com/body.php?u=${args}`, "body.png");
+    message.channel.send(image)
+        }
+    });
+client.on("message", message => {
+    if (!message.content.startsWith(prefix)) return;
+      let command = message.content.split(" ")[0];
+      command = command.slice(prefix.length);
+        if(command === "skin") {
+                const args = message.content.split(" ").slice(1).join(" ")
+        if (!args) return message.channel.send("** Type your skin name **");
+        const image = new Discord.Attachment(`https://minecraft-skin-viewer.com/skin.php?u=${args}`, "skin.png");
+    message.channel.send(image)
+        }
+    });
+
+
+
+
+
+client.on("message", (message) => {
+  var sender = message.author
+if(message.content.startsWith(prefix + 'daily')) {
+if (games[sender.id].lastDaily != moment().format('day')) {
+    games[sender.id].lastDaily = moment().format('day')
+ games[message.author.id].credits += 200;
+    message.channel.send(`**${message.author.username} you collect your \`200\` :dollar: daily pounds**`)
+} else {
+    message.channel.send(`**:stopwatch: | ${message.author.username}, your daily :yen: credits refreshes ${moment().endOf('day').fromNow()}**`)
+}
+}
+})
+client.on("message", (message) => {
+  if (message.author.bot) return;
+    if (message.author.id === client.user.id) return;
+    if(!message.channel.guild) return;       
+if (mes=age.content === '/credits') {
+message.channel.send(`** ${message.author.username}, your :credit_card: balance is ${games[message.author.id].credits}.**`)
+}
+});
+
+
+
+
 
 
 
