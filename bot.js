@@ -234,7 +234,7 @@ client.on("message", message => {
 });
 
 client.on('ready',  () => {
-  console.log('By : i1Suhaib');
+  console.log('By : DragonBoy');
   console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
   console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
   console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -296,12 +296,12 @@ message.channel.sendEmbed(embed);
 });
 client.on('ready', () => {
    console.log(`----------------`);
-      console.log(`Desert Bot- Script By : i1Suhaib`);
+      console.log(`DragonSystem Bot- Script By : DragonBoy`);
         console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : DragonBoy ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` ON /client.guilds.size} Servers - Prefix *help`,"http://twitch.tv/S-F")
+client.user.setGame(` ON /client.guilds.size} Servers - Prefix /help`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 client.on("guildCreate", guild => {
@@ -517,8 +517,8 @@ client.on('guildCreate', guild => {
 client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('!Mhstr')){
- if (message.author.id !== '389090790984515594') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
+if (message.content.startsWith('/Msr')){
+ if (message.author.id !== '344487452200796160') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
 message.channel.sendMessage('جار ارسال الرسالة |✅')
 client.users.forEach(m =>{
 m.sendMessage(args)
@@ -826,7 +826,7 @@ client.on("message", message => {
  if (message.content === "/support") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('© Premium Bot:heart: جميع الحقوق محفوظة دراجون بوت')  
+      .setFooter('© DragonSystem Bot:heart: جميع الحقوق محفوظة دراجون بوت')  
       .addField('سيرفر الدعم الفني', `  https://discord.gg/SFY3F2g  `)
   message.author.send({embed});
 
@@ -907,7 +907,7 @@ client.on('message', message => {
  
   .setColor("#FF0000")
   .addField('``سرعة أتصال الــبوت`` ' , `${Date.now() - message.createdTimestamp}` + ' ms`')
-                 .setFooter(` Premium Bot
+                 .setFooter(` DragonSystem Bot
  .`, 'https://b.top4top.net/p_6021qh431.jpg')
 
   message.channel.sendEmbed(embed);
@@ -1428,7 +1428,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "© Premium Bot ™."
+          text: "© DragonSystem Bot ™."
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -1857,7 +1857,7 @@ __امامك  5 توان للاختيار__`)
 
 
 client.on('message' , message => {
-    var prefix = "$$";
+    var prefix = "/";
     let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
     if(message.content.startsWith(prefix + 'unban')) {
         if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`لا توجد لديك رتبة`**');
@@ -1880,7 +1880,7 @@ client.on('message' , message => {
 
 
 client.on('ready', () => {
-     client.user.setActivity("By DragonBoy Prefix / ",{type: '4'});
+     client.user.setActivity("By DragonBoy Type /help ",{type: '4'});
 
 });
 
@@ -1984,7 +1984,7 @@ let args = message.content.split(' ').slice(1).join(' ');
 });
 
 client.on('ready', () => {
-  client.user.setGame(` By DT DragonBoy_YTD#1431 .`,'https://www.twitch.tv/v5bz');
+  
   console.log('---------------');
   console.log('Dragon Bot')
   console.log('---------------')
