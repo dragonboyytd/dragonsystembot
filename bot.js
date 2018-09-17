@@ -2901,7 +2901,8 @@ voiceChannel.leave();
 
 
 
-
+const moment = require('moment');
+const games = JSON.parse(fs.readFileSync("./games.json", "utf8"));
 const prefix = "/"
 client.on("message", message => {
     if (!message.content.startsWith(prefix)) return;
