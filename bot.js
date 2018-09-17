@@ -2901,53 +2901,6 @@ voiceChannel.leave();
 
 
 
-const moment = require('moment');
-const games = JSON.parse(fs.readFileSync("./games.json", "utf8"));
-const prefix = "/"
-client.on("message", message => {
-    if (!message.content.startsWith(prefix)) return;
-      let command = message.content.split(" ")[0];
-      command = command.slice(prefix.length);
-        if(command === "face") {
-                const args = message.content.split(" ").slice(1).join(" ")
-        if (!args) return message.channel.send("** Type your skin name **");
-        const image = new Discord.Attachment(`https://minecraft-skin-viewer.com/face.php?u=${args}`, "face.png");
-    message.channel.send(image)
-        }
-    });
-client.on("message", message => {
-    if (!message.content.startsWith(prefix)) return;
-      let command = message.content.split(" ")[0];
-      command = command.slice(prefix.length);
-        if(command === "abody") {
-                const args = message.content.split(" ").slice(1).join(" ")
-        if (!args) return message.channel.send("** Type your skin name **");
-        const image = new Discord.Attachment(`https://minecraft-skin-viewer.com/body-all.php?u=${args}`, "abody.png");
-    message.channel.send(image)
-        }
-    });
-client.on("message", message => {
-    if (!message.content.startsWith(prefix)) return;
-      let command = message.content.split(" ")[0];
-      command = command.slice(prefix.length);
-        if(command === "body") {
-                const args = message.content.split(" ").slice(1).join(" ")
-        if (!args) return message.channel.send("** Type your skin name **");
-        const image = new Discord.Attachment(`https://minecraft-skin-viewer.com/body.php?u=${args}`, "body.png");
-    message.channel.send(image)
-        }
-    });
-client.on("message", message => {
-    if (!message.content.startsWith(prefix)) return;
-      let command = message.content.split(" ")[0];
-      command = command.slice(prefix.length);
-        if(command === "skin") {
-                const args = message.content.split(" ").slice(1).join(" ")
-        if (!args) return message.channel.send("** Type your skin name **");
-        const image = new Discord.Attachment(`https://minecraft-skin-viewer.com/skin.php?u=${args}`, "skin.png");
-    message.channel.send(image)
-        }
-    });
 
 
 
