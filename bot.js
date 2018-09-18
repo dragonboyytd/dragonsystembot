@@ -2906,10 +2906,10 @@ message.guild.members.forEach(m => {
 var bc = new
 Discord.RichEmbed()
 .setColor('RANDOM')
-  .setTitle('`-Broadcast-`')
-.setAuthor(`Server : ${message.guild.name}`)
-.setFooter(`Sender : ${message.author.username}`)
-.setDescription(`Message : ${args}`)
+  .setTitle('`-برودكاست-`')
+.setAuthor(`السيرفر : ${message.guild.name}`)
+.setFooter(`المرسل : ${message.author.username}`)
+.setDescription(`الرسالة : ${args}`)
 .setThumbnail(message.author.avatarURL)
 m.send({ embed: bc })
 msg.delete();
