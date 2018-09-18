@@ -1,5 +1,5 @@
 {
-  "token" : (process.env.BOT_TOKEN); 
+  "token" : "NDcwNDc1MTc0MjE5NzQzMjM0.DnhrqA.n6iVGrN-Om0JsLSC2dTPmnqVNTM",
   "ms" : 1500,
   "roleToDisco" : ["disco"], 
   "prefix" : "/",
