@@ -338,7 +338,7 @@ client.on('ready',  () => {
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
 .setDescription("معلومات عن الحــساب")
-               .setFooter(`Desert Bot.`, '')
+               .setFooter(`Dragon Bot.`, '')
   .setColor("#9B59B6")
   .addField("اســـم الحســاب", `${message.author.username}`)
   .addField('كود الحساب الخاص', message.author.discriminator)
@@ -350,14 +350,8 @@ client.on('ready',  () => {
   message.channel.sendEmbed(embed);
     }
 });
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('discord.gg')){
-      if(!message.member.hasPermission('ADMINISTRATOR'))
-        message.delete()
-    return message.reply(`** يمنع نشر الروابط ! **`)
-    }
-});
+
+
 client.on('message', message => {
      if (message.content === "servers") {
      let embed = new Discord.RichEmbed()
@@ -440,7 +434,7 @@ if(cmd === `${prefix}suggest`) {
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
    .setThumbnail(message.author.avatarURL) 
- .addField('Desert Bot' ,
+ .addField('Dragon Bot' ,
   `${secreT[Math.floor(Math.random() * secreT.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
@@ -778,14 +772,6 @@ const x5bz4 = [
 
 
 
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('discord.gg')){
-		if(!message.channel.guild) return;
-        message.delete()
-    return message.reply(`** No Invite Links للاسف ما تقدر تنشر :) ههههههههههايي 😠 ! **`)
-    }
-});
 
 
 
