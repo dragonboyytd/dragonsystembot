@@ -1755,8 +1755,8 @@ client.on('message', message => {
         var الروم = message.guild.defaultChannel
         var server = new Discord.RichEmbed()
         .setThumbnail(message.guild.iconURL)
-        .addField('اسم السيرفر', servername)
-        .addField('اي دي السيرفر ' , [ايدي])
+        .addField('اسم السيرفر :gem: ', servername)
+        .addField('اي دي السيرفر :id: ' , [ايدي])
         .addField('أعضاء السيرفر', اعضاء)
         .addField('رومات السيرفر', الرومات)
         .addField('روم الشات الأساسي', الروم)
