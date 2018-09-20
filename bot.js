@@ -1,13 +1,10 @@
 const Discord = require('discord.js');
+
 const client = new Discord.Client();
 
 
 
-
-
-
-
-
+ 
 client.on('message', message => {
 
     if (message.content === "/mc") {
@@ -36,8 +33,6 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 
 
 });
- 
-
 
 
 
@@ -357,6 +352,8 @@ client.on('ready',  () => {
 });
 
 
+
+
 client.on('message', message => {
      if (message.content === "servers") {
      let embed = new Discord.RichEmbed()
@@ -439,7 +436,7 @@ if(cmd === `${prefix}suggest`) {
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
    .setThumbnail(message.author.avatarURL) 
- .addField('Dragon Bot' ,
+ .addField('Desert Bot' ,
   `${secreT[Math.floor(Math.random() * secreT.length)]}`)
   message.channel.sendEmbed(embed);
   console.log('[id] Send By: ' + message.author.username)
@@ -1760,8 +1757,8 @@ client.on('message', message => {
         var الروم = message.guild.defaultChannel
         var server = new Discord.RichEmbed()
         .setThumbnail(message.guild.iconURL)
-        .addField('اسم السيرفر :gem: ', servername)
-        .addField('اي دي السيرفر :id: ' , [ايدي])
+        .addField('اسم السيرفر', servername)
+        .addField('اي دي السيرفر ' , [ايدي])
         .addField('أعضاء السيرفر', اعضاء)
         .addField('رومات السيرفر', الرومات)
         .addField('روم الشات الأساسي', الروم)
@@ -2112,12 +2109,7 @@ suggestchannel.send("@everyone  `||` @here ");
 
 
 
-client.on("ready", () => {
-let channel =     client.channels.get("471430457532350480")
-setInterval(function() {
-channel.send(`**لا تنسى التفاعل الى يتفاعل لية مفاجئة و لا تنسى تحط قبل اسمك DT عشان تكون من الكلان**`);
-}, 7200000)
-})
+
 
 client.on('message', message => {
     if (message.content.startsWith("/hacker")) {
@@ -2865,7 +2857,36 @@ hours = 12;
 });
 
 
+client.on('message', message => {
+const yt = require('ytdl-core');
+  if (message.content.startsWith('/quran')) {
+              if(!message.channel.guild) return message.reply('** This command only for servers **');
 
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`من فضلك ادخل روم صوتي `);
+    }
+    voiceChannel.join()
+      .then(connnection => {
+        let stream = yt('https://www.youtube.com/watch?v=9-oGnGaI9Ps&t=8009s', {audioonly: true});
+        const dispatcher = connnection.playStream(stream);
+        dispatcher.on('end', () => {
+          voiceChannel.leave();
+        });
+      });
+  }
+  
+  if (message.content.startsWith('/stop')) {
+              if(!message.channel.guild) return message.reply('** This command only for servers **');
+
+    const voiceChannel = message.member.voiceChannel;
+    if (!voiceChannel) {
+      return message.reply(`من فضلك ادخل روم صوتي `);
+    }
+voiceChannel.leave();
+  }
+
+});
 
 
 
