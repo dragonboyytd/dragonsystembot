@@ -1,5 +1,5 @@
 {
-  "name": "Test",
+  "name": "speedbot",
   "description": "Test",
   "version": "0.0.0",
   "main": "bot.js",
@@ -40,10 +40,9 @@
     "sqlite": "^2.9.1",
     "youtube-info": "^1.2.0",
     "ytdl-core": "^0.20.2",
-     "ffmpeg": "0.0.4",
-    "pretty-ms": "3.1.0", 
-       "ffmpeg": "0.0.4",
+    "ffmpeg": "0.0.4",
     "ffmpeg-binaries": "^3.2.2-3",
+    "pretty-ms": "3.1.0", 
     "simple-youtube-api": "^5.0.2"
   }
 }
