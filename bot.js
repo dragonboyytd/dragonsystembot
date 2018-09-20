@@ -92,7 +92,7 @@ client.on('message', async (message) => {
             message.channel.send(helpRich)
             break
         case 'eval':
-            if (message.author.id === '471449660607954965') {
+            if (message.author.id === '249963809119272960') {
                 await message.channel.send('`' + eval(message.content.substring(6)) + '`')
             }
             break
