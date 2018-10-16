@@ -2788,7 +2788,7 @@ client.on('message', message =>{
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
-    let prefix = '/my';
+    let prefix = '/';
      
     if(cmd === `${prefix}report`){
         let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -2817,28 +2817,28 @@ client.on('message', message =>{
 
 
 client.on('message', message => {
-  if (message.content.startsWith(prefix + "deafen")) {
+  if (message.content.startsWith(prefix + "mydeafen")) {
     if (!message.member.hasPermission('DEAFEN_MEMBERS')) return;
   { message.member.setDeaf(true);
     }
   }
     });
 client.on('message', message => {
-  if (message.content.startsWith(prefix + "mute")) {
+  if (message.content.startsWith(prefix + "mymute")) {
     if (!message.member.hasPermission('DEAFEN_MEMBERS')) return;
   { message.member.setMute(true);
     }
   }
     });
 client.on('message', message => {
-  if (message.content.startsWith(prefix + "undeafen")) {
+  if (message.content.startsWith(prefix + "myundeafen")) {
     if (!message.member.hasPermission('DEAFEN_MEMBERS')) return;
   { message.member.setDeaf(false);
     }
   }
     });
 client.on('message', message => {
-  if (message.content.startsWith(prefix + "unmute")) {
+  if (message.content.startsWith(prefix + "myunmute")) {
     if (!message.member.hasPermission('MUTE_MEMBERS')) return;
   { message.member.setMute(false);
     }
