@@ -232,6 +232,7 @@ if (message.content === '/help') {
   message.author.sendEmbed(embed);
     }
 });
+
 client.on('message', message => {
      if (message.content === ".servers") {
      let embed = new Discord.RichEmbed()
