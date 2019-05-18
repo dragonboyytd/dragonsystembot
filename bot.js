@@ -281,7 +281,7 @@ client.on('message', message => {
 if (message.content === '/help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
-      .addField("** مبرمج البوت :wrench: **","**@!DragonBoy_YTD#1431 **")
+      .addField("** مبرمج البوت :wrench: **","**MelioDas [DragonBoyYTD]#6724 **")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
@@ -853,8 +853,8 @@ client.on("message", message => {
  if (message.content === "/invite") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('© Premium Bot:heart: جميع الحقوق محفوظة 2017 لــبوت')
-      .addField('شكرا لك لاستخدامك ل دراجون بوت', `https://discordapp.com/api/oauth2/authorize?client_id=470475174219743234&permissions=8&scope=bot`)
+      .setFooter('© Premium Bot:heart: جميع الحقوق محفوظة 2018 لــبوت')
+      .addField('شكرا لك لاستخدامك ل دراجون بوت', `https://discordapp.com/api/oauth2/authorize?client_id=578783319207182337&permissions=0&scope=bot`)
   message.author.send({embed});
 
  }
@@ -898,7 +898,7 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setFooter('© DragonSystem Bot:heart: جميع الحقوق محفوظة دراجون بوت')  
-      .addField('سيرفر الدعم الفني', `  https://discord.gg/SFY3F2g  `)
+      .addField('سيرفر الدعم الفني', `  https://discord.gg/nr5VbPY  `)
   message.author.send({embed});
 
  }
@@ -1981,7 +1981,8 @@ client.on('message', message => {
   if(message.content === '/support') {
   const embed = new Discord.RichEmbed()
   .setTitle('Click here')
-  .setURL('https://discord.gg/SFY3F2g')
+  .setURL('https://discord.gg/
+nr5VbPY')
   .setColor('RANDOM')
   message.channel.send({embed: embed});
   }
@@ -2209,7 +2210,7 @@ client.on('message' , message => {
 if (message.content === '/owner') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
-      .addField("**تم تطوير وبرمجه البوت من قبل 🔧 **","** DT DragonBoy \ #1431**")
+      .addField("**تم تطوير وبرمجه البوت من قبل 🔧 **","** MelioDas [DragonBoyYTD]#6724**")
 .setColor('#B101FC')
   message.author.sendEmbed(embed);
     }
@@ -2364,7 +2365,7 @@ const prefix = "/";
   .addField("User:",  `[ + ${user.tag} + ]`)
   .addField("By:", `[  + ${message.author.tag} +  ]`)
   .addField("Reason:", `[ + ${reason} +  ]`)
-  client.channels.get("492825594367836160").send({embed : banembed})
+  client.channels.get("578779631608397855").send({embed : banembed})
 }
 });
 
