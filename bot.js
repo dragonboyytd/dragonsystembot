@@ -1671,9 +1671,9 @@ client.on('message', message => {
 
 
 client.on("message", message => {
-    var prefix = "*";
+    var prefix = "/";
             var args = message.content.substring(prefix.length).split(" ");
-            if (message.content.startsWith(prefix + "clear")) {
+            if (message.content.startsWith(prefix + "nclear")) {
  if (!args[1]) {
                                 let x5bz1 = new Discord.RichEmbed()
                                  
@@ -1689,9 +1689,18 @@ client.on("message", message => {
                                 .setDescription(":white_check_mark: | Delete " + args[1] + " Message!")
                                                                                         message.delete("..");
                                 message.channel.sendEmbed(x5bz2);
+                      }}).then(msg => {msg.delete(3000)});
+                          }
+
+     
+
                             }
                           }
 });
+
+
+
+
 
 
 
@@ -1948,7 +1957,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-if (message.content.startsWith('/inv-info')) {
+if (message.content.startsWith('/invites')) {
 let oi = message.mentions.users.first() ? message.mentions.users.first().id : message.author.id ; 
   let img = message.mentions.users.first() ? message.mentions.users.first().username : message.author.username;
   let imagemm = message.mentions.users.first() ? message.mentions.users.first().avatarURL : message.author.avatarURL
@@ -1982,7 +1991,7 @@ client.on('message', message => {
   if(message.content === '/support') {
   const embed = new Discord.RichEmbed()
   .setTitle('Click here')
-  .setURL('https://discord.gg/SFY3F2g')
+  .setURL('https://discord.gg/3T3NDsy')
   .setColor('RANDOM')
   message.channel.send({embed: embed});
   }
@@ -2026,7 +2035,7 @@ client.on('ready', () => {
 client.on('message' , message => {
   var prefix = "/";
   if(message.author.bot) return;
-  if(message.content.startsWith(prefix + "send")) {
+  if(message.content.startsWith(prefix + "vote")) {
     let args = message.content.split(" ").slice(1);
 
 
@@ -2210,7 +2219,7 @@ client.on('message' , message => {
 if (message.content === '/owner') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
-      .addField("**تم تطوير وبرمجه البوت من قبل 🔧 **","** DT DragonBoy \ #1431**")
+      .addField("**تم تطوير وبرمجه البوت من قبل 🔧 **","** DG | MelioDas  [DragonBoyYTD] \ #6724**")
 .setColor('#B101FC')
   message.author.sendEmbed(embed);
     }
@@ -2759,7 +2768,7 @@ const secre = [
 
 
 client.on('guildCreate', guild => {
-  client.channels.get("493053677523959825").send(`:white_check_mark: **تم اضافة البوت في سيرفر جديد مبروكك
+  client.channels.get("587126893975961610").send(`:white_check_mark: **تم اضافة البوت في سيرفر جديد مبروكك
 Server name: __${guild.name}__
 Server owner: __${guild.owner}__
 Server id: __${guild.id}__ 
