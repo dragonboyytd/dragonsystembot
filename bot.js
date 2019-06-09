@@ -1670,6 +1670,7 @@ client.on('message', message => {
 
 
 
+
 client.on("message", message => {
     var prefix = "/";
             var args = message.content.substring(prefix.length).split(" ");
@@ -1689,10 +1690,6 @@ client.on("message", message => {
                                 .setDescription(":white_check_mark: | Delete " + args[1] + " Message!")
                                                                                         message.delete("..");
                                 message.channel.sendEmbed(x5bz2);
-                      
-
-     
-
                             }
                           }
 });
