@@ -89,7 +89,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 
 
 const adminprefix = "/";
-const devs = ['3493005382437044234'];
+const devs = ['493005382437044234'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -159,36 +159,7 @@ client.on("message", async () => {
 })
 
 
-client.on('message', message => {
-    if (message.content.startsWith("رابط")) {
 
-  message.channel.createInvite({
-        thing: true,
-        maxUses: 100,
-        maxAge: 86400
-    }).then(invite =>
-      message.author.sendMessage(invite.url)
-    )
-    const embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        .setDescription("| :white_check_mark:  | :heart:  تم ارسال الرابط على الخاص  ")
-      message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
-              const Embed11 = new Discord.RichEmbed()
-        .setColor("RANDOM")
-                .setAuthor(message.guild.name, message.guild.iconURL)
-        .setDescription(`
-**
----------------------
--[${message.guild.name}]  هذا هو رابط سيرفر
----------------------
--هذا الرابط صالح ل 100 مستخدم فقط
----------------------
--هذا الرابط صالح لمده 24 ساعه فقط
----------------------
-**`)
-      message.author.sendEmbed(Embed11)
-    }
-});
 
 
 	
@@ -282,7 +253,7 @@ client.on('message', message => {
 if (message.content === '/help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
-      .addField("** مبرمج البوت :wrench: **","**@!DragonBoy_YTD#1431 **")
+      .addField("** مبرمج البوت :wrench: **","**DragonBoyYTD#6724 **")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
@@ -344,7 +315,7 @@ client.on('ready',  () => {
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
 .setDescription("معلومات عن الحــساب")
-               .setFooter(`Dragon Bot.`, '')
+               .setFooter(`RedFor Bot.`, '')
   .setColor("#9B59B6")
   .addField("اســـم الحســاب", `${message.author.username}`)
   .addField('كود الحساب الخاص', message.author.discriminator)
